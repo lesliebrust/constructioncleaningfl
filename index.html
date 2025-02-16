@@ -3,193 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Construction Cleaning Pros</title>
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- CSS Styles -->
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
             color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensures the body takes full height */
         }
-
-        /* Header Section */
-        header {
-            background-color: #004D77;
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+        header, footer {
+            background: #87CEEB;
             color: #fff;
-            text-align: center;
-            padding: 3rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px 0;
         }
-
-        header h1 {
-            font-size: 3.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            font-weight: 300;
-        }
-
-        /* Main Content Section */
-        .main-content {
-            flex: 1; /* Takes all available space except footer */
-            padding: 4rem 2rem;
-            text-align: center;
-            background-color: #fff;
-        }
-
-        .main-content h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            color: #004D77;
-            font-weight: 600;
-        }
-
-        .main-content p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            color: #555;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-info div {
-            padding: 2rem;
-            background-color: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-            width: 100%;
-            text-align: left;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-info div:hover {
-            transform: translateY(-10px);
-        }
-
-        .contact-info div h3 {
-            font-size: 1.5rem;
-            color: #004D77;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .contact-info div p {
-            font-size: 1.1rem;
-            margin-bottom: 0.8rem;
-            color: #777;
-        }
-
-        .contact-info div a {
-            font-size: 1.1rem;
-            color: #004D77;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-info div a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer Banner */
-        .footer-banner {
+        nav {
+            background: #222;
+            padding: 10px 0;
             position: sticky;
-            bottom: 0;
-            width: 100%;
-            background-color: #004D77;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            font-size: 1rem;
-            font-weight: 400;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            top: 0;
+            z-index: 1000;
         }
-
-        /* Responsive Design */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #hero {
+            background: url('https://images.pexels.com/photos/3616746/pexels-photo-3616746.jpeg') no-repeat center center/cover;
+            color: #000;
+            padding: 80px 0;
+        }
+        .spotlight {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .spotlight img {
+            width: 40%;
+            border-radius: 8px;
+        }
+        .spotlight .text {
+            width: 60%;
+            padding: 20px;
+            text-align: left;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ffcc00;
+            color: #222;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        #contact {
+            background: #e3f2fd;
+            padding: 50px 0;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        #contact p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .contact-info {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+        }
         @media (max-width: 768px) {
-            .contact-info {
+            .spotlight {
                 flex-direction: column;
-                align-items: center;
             }
-
-            .contact-info div {
-                max-width: 90%;
-                margin-bottom: 1.5rem;
-            }
-
-            header h1 {
-                font-size: 2.8rem;
-            }
-
-            .main-content h2 {
-                font-size: 2.2rem;
+            .spotlight img, .spotlight .text {
+                width: 100%;
             }
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('nav ul li a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 50,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </head>
-
 <body>
-
-    <!-- Header Section -->
     <header>
-        <h1>Construction Cleaning Pros</h1>
-        <p>Your trusted partner for professional construction site cleaning services in Ormond Beach, FL</p>
+        <div class="container">
+            <h1>Construction Cleaning Pros</h1>
+            <p>Expert cleanup solutions for construction and renovation projects of any size</p>
+        </div>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="hero">
+        <div class="container">
+            <h2>Professional Post-Construction Cleaning</h2>
+            <p>We ensure every project site is spotless and move-in ready.</p>
+            <a href="#contact" class="btn">Request a Free Quote</a>
+        </div>
+    </section>
+    <section id="about" class="container">
+        <h2>About Us</h2>
+        <p>At Construction Cleaning Pros, we specialize in post-construction cleaning for both commercial and residential projects. Our dedicated team utilizes industry-leading techniques to eliminate debris, dust, and residues, ensuring your space is pristine and ready for occupancy.</p>
+    </section>
+    <section id="services" class="container">
+        <h2>Our Services</h2>
+        <div class="spotlight">
+            <img src="https://images.pexels.com/photos/30387770/pexels-photo-30387770.jpeg" alt="Debris Removal">
+            <div class="text">
+                <h3>Debris & Dust Removal</h3>
+                <p>After construction, dust and debris can create a hazardous and messy environment. Our team at Construction Cleaning Pros ensures every inch of your site is cleared of leftover materials, drywall dust, and other construction remnants. We use high-powered vacuums and professional cleaning techniques to make your space safe and spotless.
 
-    <!-- Main Content Section -->
-    <div class="main-content">
-        <h2>Welcome to Construction Cleaning Pros</h2>
-        <p>At Construction Cleaning Pros, we specialize in cleaning construction sites, ensuring that every space is spotless and ready for occupancy. With over 10 years of experience in the industry, we offer comprehensive services, including debris removal, final cleaning, and touch-ups. Our team is dedicated to providing the highest standards of cleanliness, making sure your project is completed to perfection.</p>
-
-        <div class="contact-info">
-            <div>
-                <h3>Email</h3>
-                <p><a href="mailto:lesliebrust@constructioncleaingfl.com">lesliebrust@constructioncleaingfl.com</a></p>
-            </div>
-            <div>
-                <h3>Phone</h3>
-                <p>(386) 301-0511</p>
-            </div>
-            <div>
-                <h3>Location</h3>
-                <p>82 Pinecrest Ave, Ormond Beach, FL 32176</p>
+</p>
             </div>
         </div>
-    </div>
-
-    <!-- Footer Banner -->
-    <div class="footer-banner">
-        <p>&copy; 2025 Construction Cleaning Pros | Serving Ormond Beach, FL</p>
-    </div>
-
+        <div class="spotlight">
+            <img src="https://images.pexels.com/photos/287263/pexels-photo-287263.jpeg" alt="Window Cleaning">
+            <div class="text">
+                <h3>Window & Glass Cleaning</h3>
+                <p>Construction often leaves windows covered in dust, paint splatters, and adhesive residues. Our streak-free window cleaning service restores clarity and shine to all glass surfaces, enhancing the overall appearance of your property. Whether it's high-rise windows or storefront glass, we have the tools and expertise to make them crystal clear.
+</p>
+            </div>
+        </div>
+        <div class="spotlight">
+            <img src="https://images.pexels.com/photos/6195951/pexels-photo-6195951.jpeg" alt="Floor Cleaning">
+            <div class="text">
+                <h3>Floor Cleaning & Polishing</h3>
+                <p>Floors take the brunt of post-construction mess, with paint drips, dust, and grime accumulating quickly. We deep clean, scrub, and polish all flooring types, from tile to hardwood, ensuring a flawless finish. Our expert cleaning restores the original shine and removes any signs of construction work.</p>
+            </div>
+        </div>
+        <div class="spotlight">
+            <img src="https://images.pexels.com/photos/4108713/pexels-photo-4108713.jpeg" alt="Sanitization">
+            <div class="text">
+                <h3>Deep Sanitization & Disinfection</h3>
+                <p>Post-construction dust and debris can leave harmful particles in the air and on surfaces. We go beyond simple cleaning by fully sanitizing and disinfecting your space. Using hospital-grade and eco-friendly disinfectants, we eliminate germs, bacteria, and construction contaminants, making the area safe for employees, residents, or customers.</p>
+            </div>
+        </div>
+        <div class="spotlight">
+            <img src="https://images.pexels.com/photos/17041922/pexels-photo-17041922.jpeg" alt="Pressure Washing">
+            <div class="text">
+                <h3>Pressure Washing</h3>
+                <p>Exterior surfaces also need attention after construction! Our professional pressure washing services remove dirt, mud, and residue from sidewalks, driveways, and building exteriors. This final touch gives your property a fresh and polished look, ensuring a clean and welcoming appearance.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p><strong>📍 Address:</strong> 82 Pinecrest Ave, Ormond Beach, FL 32176</p>
+            <p><strong>📞 Phone:</strong> (386) 301-0511</p>
+            <p><strong>📧 Email:</strong> <a href="mailto:lesliebrust@constructioncleaingfl.com">lesliebrust@constructioncleaingfl.com</a></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Construction Cleaning Pros</p>
+    </footer>
 </body>
 </html>
